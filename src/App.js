@@ -30,13 +30,15 @@ class App extends Component {
 
   render() {
       return (
-          <div className="App">
+              <div className="App">
               <h1>React Upload Files with Filepond</h1>
               {/* Pass FilePond properties as attributes */}
+            
               <FilePond 
                         className='filepond'
                         ref={ref => this.pond = ref}
                         files={this.state.files}
+                        labelFileProcessing='Your files are uploading'
                         allowMultiple={true}
                         allowDownloadByUrl={false}
                         oninit={() => this.handleInit() }
@@ -48,7 +50,7 @@ class App extends Component {
                         }}>
               </FilePond>
 
-          </div>
+            </div>      
       );
   }
 }

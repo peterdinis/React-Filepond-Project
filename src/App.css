@@ -4,5 +4,36 @@
 
 h1 {
   color: #006699;
+  margin-top: 1rem;
 }
 
+.filepond {
+  margin-top: 1rem;
+  width: 50%;
+  display: flex;
+  margin-left: 25%;
+}
+
+.filepond--item {
+  width: calc(50% - .5em);
+}
+
+@media (min-width: 30em) {
+  .filepond--item {
+      width: calc(50% - .5em);
+  }
+}
+
+@media (min-width: 50em) {
+  .filepond--item {
+      width: calc(33.33% - .5em);
+  }
+}
+
+.filepond--label-action {
+  color: #006699;
+}
+
+.drag {
+  color: #006699;
+}
