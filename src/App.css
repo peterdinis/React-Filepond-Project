@@ -8,8 +8,8 @@ h1 {
 }
 
 .filepond {
-  margin-top: 1rem;
-  width: 50%;
+  margin-top: 2rem;
+  width: 60%;
   display: flex;
   margin-left: 25%;
 }
@@ -31,9 +31,13 @@ h1 {
 }
 
 .filepond--label-action {
-  color: #006699;
+  color:#333;
 }
 
 .drag {
-  color: #006699;
+  color:#333;
+}
+
+a.filepond--credits {
+  visibility: hidden;
 }
