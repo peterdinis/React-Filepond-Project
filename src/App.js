@@ -6,9 +6,11 @@ import FilePondPluginGetFile from 'filepond-plugin-get-file';
 import 'filepond-plugin-get-file/dist/filepond-plugin-get-file.min.css';
 import FilePondPluginImageExifOrientation from 'filepond-plugin-image-exif-orientation';
 import FilePondPluginImagePreview from 'filepond-plugin-image-preview';
+import FilePondPluginFileValidateSize from 'filepond-plugin-file-validate-size';
+
 import 'filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css';
 
-registerPlugin(FilePondPluginImagePreview, FilePondPluginGetFile, FilePondPluginImageExifOrientation, FilePondPluginImagePreview);
+registerPlugin(FilePondPluginImagePreview, FilePondPluginFileValidateSize, FilePondPluginGetFile, FilePondPluginImageExifOrientation, FilePondPluginImagePreview);
 
 class App extends Component {
   constructor(props) {
@@ -40,7 +42,11 @@ class App extends Component {
                         files={this.state.files}
                         labelFileProcessing='Your files are uploading'
                         allowMultiple={true}
+                        name='files'
+                        dropValidation
+                        dropOnPage
                         allowDownloadByUrl={false}
+                        labelMaxFileSizeExceeded="Uploaded file is to large"
                         oninit={() => this.handleInit() }
                         onupdatefiles={(fileItems) => {
                             // Set current file objects to this.state
