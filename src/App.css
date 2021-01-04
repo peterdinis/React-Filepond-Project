@@ -47,8 +47,19 @@ h1 {
 
 /*Pridať some mobile queries */
 
-@media (max-width: 360px) {
+@media (max-width: 365px) {
+  h1 {
+    font-size: 1.4rem;
+    margin-right: 2rem;
+  }
 
+  .filepond--item {
+    width: 90%;
+  }
+
+  .filepond--root {
+    width: 70%;
+  }
 }
 
 .filepond--label-action {
